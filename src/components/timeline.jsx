@@ -31,7 +31,12 @@ export function Timeline() {
     {
       year: "2025",
       title: "Compass Digital AI Labs",
-      description: "Data & AI Engineer"
+      description: "Data & AI Engineering Intern"
+    },
+    {
+      year: "2025",
+      title: "Lovelytics (UTMIST)",
+      description: "Machine Learning Engineer"
     },
     {
       year: "2025",
@@ -62,7 +67,7 @@ export function Timeline() {
       className="w-full max-w-3xl mx-auto py-12 md:py-16 my-24"
     >
       <motion.h2
-        className="text-center text-3xl font-bold sm:text-4xl dark:text-neutral-100 mb-12"
+        className="text-center text-3xl font-bold sm:text-4xl text-foreground mb-12"
         initial={{
           y: 30,
           opacity: 0
@@ -80,8 +85,8 @@ export function Timeline() {
       
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 transform translate-x-[-0.5px] hidden md:block" />
-        <div className="absolute left-[20px] top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 md:hidden" />
+        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border transform translate-x-[-0.5px] hidden md:block" />
+        <div className="absolute left-[20px] top-0 bottom-0 w-0.5 bg-border md:hidden" />
         
         {/* Timeline events */}
         <div className="relative">
@@ -101,14 +106,14 @@ export function Timeline() {
                 {/* Desktop layout - alternating left and right */}
                 <div className="hidden md:flex">
                   {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform translate-x-[-5px] top-7 w-[10px] h-[10px] rounded-full bg-white dark:bg-white border-2 border-white dark:border-white z-10" />
+                  <div className="absolute left-1/2 transform translate-x-[-5px] top-7 w-[10px] h-[10px] rounded-full bg-primary border-2 border-background z-10" />
                   
                   {/* Left side content (even indices) */}
                   {isEven && (
                     <>
                       <div className="w-1/2 pr-12 text-right">
                         <div className="mb-2 text-right">
-                          <span className="text-sm font-semibold inline-block border-b border-gray-300 dark:border-gray-300 pb-1 px-3">
+                          <span className="text-sm font-semibold inline-block border-b border-muted-foreground/30 pb-1 px-3 text-muted-foreground">
                             {event.year}
                           </span>
                         </div>
@@ -117,8 +122,8 @@ export function Timeline() {
                           variants={cardVariants}
                           whileHover="hover"
                         >
-                          <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
-                          <p className="text-gray-500 dark:text-gray-400">
+                          <h3 className="text-lg font-semibold mb-2 text-foreground">{event.title}</h3>
+                          <p className="text-muted-foreground">
                             {event.description}
                           </p>
                         </motion.div>
@@ -133,7 +138,7 @@ export function Timeline() {
                       <div className="w-1/2 pr-12"></div>
                       <div className="w-1/2 pl-12">
                         <div className="mb-2">
-                          <span className="text-sm font-semibold inline-block border-b border-gray-300 dark:border-gray-300 pb-1 px-3">
+                          <span className="text-sm font-semibold inline-block border-b border-muted-foreground/30 pb-1 px-3 text-muted-foreground">
                             {event.year}
                           </span>
                         </div>
@@ -142,8 +147,8 @@ export function Timeline() {
                           variants={cardVariants}
                           whileHover="hover"
                         >
-                          <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
-                          <p className="text-gray-500 dark:text-gray-400">
+                          <h3 className="text-lg font-semibold mb-2 text-foreground">{event.title}</h3>
+                          <p className="text-muted-foreground">
                             {event.description}
                           </p>
                         </motion.div>
@@ -155,11 +160,11 @@ export function Timeline() {
                 {/* Mobile layout - all on right side */}
                 <div className="flex md:hidden">
                   {/* Timeline dot */}
-                  <div className="absolute left-[20px] transform translate-x-[-5px] top-7 w-[10px] h-[10px] rounded-full bg-white dark:bg-white border-2 border-white dark:border-white z-10" />
+                  <div className="absolute left-[20px] transform translate-x-[-5px] top-7 w-[10px] h-[10px] rounded-full bg-primary border-2 border-background z-10" />
                   
                   <div className="w-full ml-12">
                     <div className="mb-2">
-                      <span className="text-sm font-semibold inline-block border-b border-gray-300 dark:border-gray-300 pb-1 px-3">
+                      <span className="text-sm font-semibold inline-block border-b border-muted-foreground/30 pb-1 px-3 text-muted-foreground">
                         {event.year}
                       </span>
                     </div>
@@ -168,8 +173,8 @@ export function Timeline() {
                       variants={cardVariants}
                       whileHover="hover"
                     >
-                      <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400">
+                      <h3 className="text-lg font-semibold mb-2 text-foreground">{event.title}</h3>
+                      <p className="text-muted-foreground">
                         {event.description}
                       </p>
                     </motion.div>
