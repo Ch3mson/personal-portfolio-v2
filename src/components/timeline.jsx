@@ -30,13 +30,13 @@ export function Timeline() {
   const timelineEvents = [
     {
       year: "2025",
-      title: "Brandey.ai",
-      description: "Founding Engineer"
+      title: "Compass Digital AI Labs",
+      description: "Data & AI Engineer"
     },
     {
       year: "2025",
       title: "ABIC",
-      description: "Software Engineer Intern"
+      description: "Software Engineering Intern"
     },
     {
       year: "2024",
